@@ -101,21 +101,24 @@ int main(void){
         i1 = 0;
         i2 = 0;
         int input;
-        printf("Type the input (1 for button input // 2 for motion detection // 0 to exit the program): ");
+        printf("Type the input (0 for nothing // 1 for button input // 2 for motion detection // 3 for both): ");
         scanf("%d",&input);
 
-        if (input == 1) {
+        if (input == 0) {
+            i1 = 0;
+            i2 = 0;
+        } else if (input == 1){
             i1 = 1;
             i2 = 0;
         } else if (input == 2){
             i1 = 0;
             i2 = 1;
-        } else if (input == 0){
-            exit(0);
+        } else if (input == 3) {
+            i1 = 1;
+            i2 = 1;
         } else {
-            red();
-            printf("\nError: please put the correct input.\n");
-            exit(0);
+            i1 = 1;
+            i2 = 1;
         }
 
         states(s0,s1,i1,i2,&S0,&S1);
