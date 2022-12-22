@@ -38,7 +38,7 @@ In this simple security system, I can move between states with a specific input 
 
 
 
-From the diagram above I came up with this table
+From the diagram above I came up with this table.
 
 <img src="./img/table.png" width="600">
 
