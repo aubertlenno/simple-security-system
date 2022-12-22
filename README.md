@@ -34,7 +34,7 @@ In my simple security system, I use **3 states** which are **Disarmed**, **Armed
 
 In this simple security system, I can move between states with a specific input entered to the system. The initial state is 'Disarmed', then when you press the button it will go to the 'Armed' state and it will wait until the motion sensor is activated. When the motion sensor is activated, it will go to the 'Triggered' state and it will notice the responsible guard. To stop the alarm, the button must be pressed in order to make the system go into 'Disarmed' state. I have prepared a Finite State Machine diagram to give a clear explanation about the transition of the simple security system.
 
-![fsm-diagram](.\img\fsm-diagram.png)
+![fsm-diagram](./img/fsm-diagram.png)
 
 
 
