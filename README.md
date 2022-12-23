@@ -34,13 +34,13 @@ In my simple security system, I use **3 states** which are **Disarmed**, **Armed
 
 In this simple security system, I can move between states with a specific input entered to the system. The initial state is 'Disarmed', then when you press the button it will go to the 'Armed' state and it will wait until the motion sensor is activated. When the motion sensor is activated, it will go to the 'Triggered' state and it will notice the responsible guard. To stop the alarm, the button must be pressed in order to make the system go into 'Disarmed' state. I have prepared a Finite State Machine diagram to give a clear explanation about the transition of the simple security system.
 
-<img src="./img/fsm-diagram.png" width="500" align="left">
+<img src="./img/fsm-diagram.png" width="500">
 
 
 
 From the diagram above I came up with this table.
 
-<img src="./img/table.png" width="450" align="left">
+<img src="./img/table.png" width="450">
 
 
 
@@ -48,25 +48,25 @@ And then from the table I came up with 4 Karnaugh maps
 
 - ###### Next State (s0) Kmap
 
-  <img src="./img/kmap-next-state-s0.png" width="400" align="left">
+  <img src="./img/kmap-next-state-s0.png" width="400">
 
   
 
 - ###### Next State (s1) Kmap
 
-  <img src="./img/kmap-next-state-s1.png" width="400" align="left">
+  <img src="./img/kmap-next-state-s1.png" width="400">
 
   
 
 - ###### Output (o0) Kmap
 
-  <img src="./img/kmap-output-o0.png" width="400" align="left">
+  <img src="./img/kmap-output-o0.png" width="400">
 
   
 
 - ###### Output (o1) Kmap
 
-  <img src="./img/kmap-output-o1.png" width="400" align="left">
+  <img src="./img/kmap-output-o1.png" width="400">
 
 
 
