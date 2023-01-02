@@ -108,3 +108,23 @@ Follow the step-by-step tutorial below on how to run the program:
 6. Run `make`
 
 7. The program will run and you will need to enter the input (0, 1, 2, or 3)
+
+
+
+#### Output
+
+The program will look like this when started
+
+![output-1](./img/no-input.png)
+
+
+
+If the button is pressed, it will look like this
+
+![button-pressed](./img/armed-state.png)
+
+
+
+If the motion is detected, it will look like this
+
+![motion-detected](./img/triggered-state.png)
