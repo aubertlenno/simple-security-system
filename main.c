@@ -4,12 +4,12 @@
 
 #include "mylib/mylib.h"
 
-void green() {
-    printf("\033[0;32m");
+void white_on_green() {
+    printf("\033[37;42m");
 }
 
-void red() {
-    printf("\033[0;31m");
+void white_on_red() {
+    printf("\033[41;37m");
 }
 
 void blue() {
@@ -20,15 +20,96 @@ void reset() {
     printf("\033[0m");
 }
 
+void disarmed() {
+    printf("              ,---------------------------,\n");
+    printf("              |  /---------------------\\  |\n");
+    printf("              | |                       | |\n");
+    printf("              | |                       | |\n");
+    printf("              | |        Disarmed       | |\n");
+    printf("              | |                       | |\n");
+    printf("              | |                       | |\n");
+    printf("              |  \\---------------------/  |\n");
+    printf("              |___________________________|\n");
+    printf("                \\_____     []     _______/\n");
+    printf("                    /______________\\ \n");
+}
+
+void armed() {
+    printf("              ,---------------------------,\n");
+    printf("              |  /---------------------\\  |\n");
+    printf("              | |");
+    white_on_green();
+    printf("                       ");
+    reset();
+    printf("| |\n");
+    printf("              | |");
+    white_on_green();
+    printf("                       ");
+    reset();
+    printf("| |\n");
+    printf("              | |");
+    white_on_green();
+    printf("         Armed         ");
+    reset();
+    printf("| |\n");
+    printf("              | |");
+    white_on_green();
+    printf("                       ");
+    reset();
+    printf("| |\n");
+    printf("              | |");
+    white_on_green();
+    printf("                       ");
+    reset();
+    printf("| |\n");
+    printf("              |  \\---------------------/  |\n");
+    printf("              |___________________________|\n");
+    printf("                \\_____     []     _______/\n");
+    printf("                    /______________\\ \n");
+    reset();
+}
+
+void triggered() {
+    printf("              ,---------------------------,\n");
+    printf("              |  /---------------------\\  |\n");
+    printf("              | |");
+    white_on_red();
+    printf("                       ");
+    reset();
+    printf("| |\n");
+    printf("              | |");
+    white_on_red();
+    printf("                       ");
+    reset();
+    printf("| |\n");
+    printf("              | |");
+    white_on_red();
+    printf("     !!Triggered!!     ");
+    reset();
+    printf("| |\n");
+    printf("              | |");
+    white_on_red();
+    printf("                       ");
+    reset();
+    printf("| |\n");
+    printf("              | |");
+    white_on_red();
+    printf("                       ");
+    reset();
+    printf("| |\n");
+    printf("              |  \\---------------------/  |\n");
+    printf("              |___________________________|\n");
+    printf("                \\_____     []     _______/\n");
+    printf("                    /______________\\ \n");
+    reset();
+}
+
 int main(void){
     int S0=0, S1=0, s0=0, s1=0, i1=0, i2=0, O0=0, O1=0;
     while(true){
         if ((S0 == 0) && (S1 == 0)){
             system("clear");
-            green();
-            printf("Disarmed");
-            reset();
-            printf("\n\nArmed\n\nTriggered");
+            disarmed();
             if ((i1 == 0) && (i2 == 0)) {
                 printf("\n\nButton\t\tMotion\n\n");
             } else if ((i1 == 1) && (i2 == 0)) {
@@ -49,11 +130,7 @@ int main(void){
         }
         else if ((S0 == 0) && (S1 == 1)){
             system("clear");
-            printf("Disarmed");
-            green();
-            printf("\n\nArmed");
-            reset();
-            printf("\n\nTriggered");
+            armed();
             if ((i1 == 0) && (i2 == 0)) {
                 printf("\n\nButton\t\tMotion\n\n");
             } else if ((i1 == 1) && (i2 == 0)) {
@@ -74,11 +151,7 @@ int main(void){
         }
         else if ((S0 == 1) && (S1 == 0)){
             system("clear");
-            printf("Disarmed");
-            printf("\n\nArmed");
-            red();
-            printf("\n\n!!Triggered!!");
-            reset();
+            triggered();
             if ((i1 == 0) && (i2 == 0)) {
                 printf("\n\nButton\t\tMotion\n\n");
             } else if ((i1 == 1) && (i2 == 0)) {
